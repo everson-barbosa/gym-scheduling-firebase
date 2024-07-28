@@ -1,4 +1,4 @@
-import { CalendarFoldIcon, FlameIcon } from "lucide-react";
+import { CalendarClockIcon, CalendarFoldIcon, CalendarX2Icon, FlameIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function RootPage() {
@@ -27,10 +27,10 @@ export function RootPage() {
           <div>
             <h3>Você tem um horário agendado para as (15h)</h3>
 
-            <Link to='/scheduling'><CalendarFoldIcon /> Cancelar horário</Link>
-            <Link to='/scheduling'><CalendarFoldIcon /> Alterar horário</Link>
+            <Link to='/scheduling'><CalendarClockIcon /> Alterar horário</Link>
+            <Link to='/scheduling'><CalendarX2Icon /> Cancelar horário</Link>
           </div>
-        }
+        }Lucide
 
       </div>
     </div>

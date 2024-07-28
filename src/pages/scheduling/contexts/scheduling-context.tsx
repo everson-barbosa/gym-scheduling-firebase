@@ -54,6 +54,10 @@ export const SchedulingProvider = ({ children }: SchedulingProviderProps) => {
     return hours
   }, [parameters])
 
+  const getTodaySchedules = useCallback(() => {
+
+  }, [])
+
   useEffect(() => {
     getParameters()
   }, [getParameters])
