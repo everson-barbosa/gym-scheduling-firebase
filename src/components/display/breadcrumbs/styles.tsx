@@ -12,7 +12,10 @@ export const Breadcrumbs = styled.div`
 
 export const BreadcrumbLink = styled(Link)`
   text-decoration: none;
-  color: ${props => props["aria-disabled"] ? '#a9a9a9' : '#f9f9f9'};
+  color: ${props => props["aria-disabled"] ? 
+    '#a9a9a9' : 
+    props.theme.gray[1000]  
+  };
   cursor: ${props => props["aria-disabled"] ? 'default' : 'pointer'};
 
   &:first-child:after {
