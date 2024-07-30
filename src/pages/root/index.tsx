@@ -1,17 +1,21 @@
-import { CalendarClockIcon, CalendarFoldIcon, CalendarX2Icon, FlameIcon } from "lucide-react";
-import { Link } from "react-router-dom";
+import { CalendarClockIcon, CalendarFoldIcon, CalendarX2Icon, FlameIcon, Link } from "lucide-react";
+import * as S from './styles'
 
 export function RootPage() {
   const isAlreadyReserved = true
 
   return (
     <div>
-      <div>
-        <div>
+      <S.Insight>
+        <S.Streak>
           <span>Investida</span>
-          <FlameIcon />
-        </div>
-      </div>
+          <FlameIcon size={24}/>
+        </S.Streak>
+        <S.History>
+          <span>Histórico</span>
+          <FlameIcon size={24}/>
+        </S.History>
+      </S.Insight>
       <div>
         {
           !isAlreadyReserved && 
@@ -24,13 +28,19 @@ export function RootPage() {
 
         {
           isAlreadyReserved && 
-          <div>
+          <S.Card>
             <h3>Você tem um horário agendado para as (15h)</h3>
 
-            <Link to='/scheduling'><CalendarClockIcon /> Alterar horário</Link>
-            <Link to='/scheduling'><CalendarX2Icon /> Cancelar horário</Link>
-          </div>
-        }Lucide
+            <S.Actions>
+              <S.ButtonLink to='/scheduling'>
+                <CalendarClockIcon /> Alterar horário
+              </S.ButtonLink>
+              <S.ButtonLink to='/scheduling'>
+                <CalendarX2Icon /> Cancelar horário
+              </S.ButtonLink>
+            </S.Actions>
+          </S.Card>
+        }
 
       </div>
     </div>

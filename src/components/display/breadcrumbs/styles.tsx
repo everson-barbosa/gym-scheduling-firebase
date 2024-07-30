@@ -16,7 +16,8 @@ export const BreadcrumbLink = styled(Link)`
   cursor: ${props => props["aria-disabled"] ? 'default' : 'pointer'};
 
   &:first-child:after {
-    content: '>';
+    content: '/';
+    font-size: .75rem;
     margin: 0 0 0 .5rem;
   }
 

@@ -1,11 +1,21 @@
 import styled from "styled-components";
 
+export const Content = styled.div`
+  background-color: ${(props) => props.theme.gray[0]};
+  color: ${(props) => props.theme.gray[1000]};
+  transition: color .3s linear;
+`
+
 export const Header = styled.header`
   display: flex;
   align-items: center;
-  justify-Content: center;
+  justify-Content: space-between;
   height: 3rem;
-  background-image: linear-gradient(#060612, #161622, transparent);
+  padding: 0 1rem;
+  background-image: linear-gradient(
+    ${(props => props.theme.gray['0'])}, 
+    transparent
+  );
   position: sticky;
   top: 0;
   left: 0;

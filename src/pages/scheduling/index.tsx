@@ -8,7 +8,7 @@ export function SchedulingPage() {
     <SchedulingProvider>
       <Breadcrumbs links={[ 
         { href: '/', name: 'Home' },
-        { href: '/', name: 'Agendamentos' } 
+        { href: '/scheduling', name: 'Agendamentos' } 
       ]}/>
       <SchedulingTable />
     </SchedulingProvider>
